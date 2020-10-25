@@ -9,7 +9,12 @@ class DisplayPageContainer extends Component {
         super(props);
 
         let { route } = props;
-        this.data = route.params.data;
+        let res = route.params.data;
+
+        this.data = {
+            key: res.key,
+            url: res.url
+        }
     }
 
 

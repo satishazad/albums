@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
     View, StyleSheet
 } from 'react-native';
+import { WebView } from 'react-native-webview';
 import Label from "../../utils/custom_component/Label";
 
 
@@ -22,11 +23,12 @@ class DisplayPageView extends Component {
         } = this.props;
 
         return(
-            <View style={styles.container}>
-                <Label
-                    text={JSON.stringify(data)}
+            // <View style={styles.container}>
+                <WebView
+                    style={styles.web}
+                    source={{ uri: data.url }}
                 />
-            </View>
+            // </View>
         )
     }
 
@@ -35,6 +37,9 @@ class DisplayPageView extends Component {
 const styles = StyleSheet.create({
     container: {
 
+    },
+    web: {
+        flex: 1
     }
 })
 

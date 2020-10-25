@@ -20,7 +20,7 @@ const AppContainer = () => {
             <Stack.Navigator>
                 <Stack.Screen name={'AlbumsList'} component={AlbumsListContainer} options={{ headerLeft: null, title: 'Albums' }}/>
                 <Stack.Screen name={'AlbumDetails'} component={AlbumDetailsContainer} options={{ title: 'Album Details' }} />
-                <Stack.Screen name={'DisplayPage'} component={DisplayPageContainer} options={{ title: 'Display Page'}} />
+                <Stack.Screen name={'DisplayPage'} component={DisplayPageContainer} options={{ title: 'Content'}} />
             </Stack.Navigator>
         </NavigationContainer>
     )

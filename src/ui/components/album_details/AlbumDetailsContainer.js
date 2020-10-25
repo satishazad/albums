@@ -44,24 +44,25 @@ class AlbumDetailsContainer extends Component {
         let {
             album
         } = this.props;
-        let url = album[key];
+        let data = album[key];
 
         try {
-            if (url && url.includes('http')) {
-                this.openDisplayPage(key, url);
+            if (data && data.includes('http')) {
+                this.openDisplayPage(key, data);
             }
             else {
-                FlashAlert.show('Info', 'Nothing to display')
+                FlashAlert.showSuccess(data, key.toUpperCase())
             }
         } catch (e) {
-            FlashAlert.show('Info', 'Nothing to display')
+            FlashAlert.showSuccess('Nothing to display', key.toUpperCase())
         }
     }
 
     openDisplayPage(key, url) {
 
         let data = {
-            [key]: url
+            key: key,
+            url: url
         };
 
         this.props.navigation.navigate(ROUTE.DISPLAY_PAGE, { data })
