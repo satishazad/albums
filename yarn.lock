@@ -6265,6 +6265,13 @@ react-native-jsmodel@^0.0.6:
   resolved "https://registry.yarnpkg.com/react-native-jsmodel/-/react-native-jsmodel-0.0.6.tgz#86edef7d05c1200b70f8f10d6e9b9e523ef8fa75"
   integrity sha512-Wv12VA7VAhicqr97WI9JQ2NbDy9ytWjddfEogbRWDOyPJs51J+Iw7ZiqwXK0X9JYyyuNTbSOxOnfDSH6QBCrVw==
 
+react-native-loading-spinner-overlay@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-loading-spinner-overlay/-/react-native-loading-spinner-overlay-2.0.0.tgz#30934b6f07cb39711020d6b422a02a2a56763a73"
+  integrity sha512-V38M+N1Wk9GlpbfrD6znsJA1K2+09b3naxq3UjDjqNTA3MOBfj4W87alKSI3P+4ZawczQASTv2fTzhEQ7Z+SVA==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-native-normalize@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-native-normalize/-/react-native-normalize-1.0.1.tgz#52de71d1b86dd357c6f40fd4ab84b10336f0f072"

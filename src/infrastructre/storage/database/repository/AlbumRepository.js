@@ -1,4 +1,3 @@
-
 import IRepository from "../../../../core/base_repository/IRepository";
 import AlbumsListModel from "../../../../core/models/AlbumsListModel";
 
@@ -72,11 +71,10 @@ class AlbumRepository extends IRepository {
         let realm = this.database.realmObj;
         let realmObjects = realm.objects(ALBUM_SCHEMA_KEYS.NAME);
         let records = Array.from(realmObjects);
-        let model = new AlbumsListModel({
+        return new AlbumsListModel({
             resultCount: records.length,
             results: records
         });
-        return model;
     }
 }
 

@@ -4,6 +4,7 @@ import {
     View, StyleSheet
 } from 'react-native';
 import {ViewStyle} from "../../common_styles/ViewStyle";
+import Loader from "../../utils/loader/Loader";
 
 class AlbumsListView extends Component {
 
@@ -25,9 +26,16 @@ class AlbumsListView extends Component {
      * Render View
      * */
     render() {
+
+        let {
+            isProcessing
+        } = this.props;
+
         return(
             <View style={[ViewStyle.container, styles.container]}>
 
+
+                <Loader visible={isProcessing}/>
             </View>
         )
     }

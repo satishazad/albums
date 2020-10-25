@@ -27,13 +27,20 @@ class AlbumsListContainer extends Component {
      * Render View
      * */
     render() {
+
+        let {
+            isProcessing
+        } = this.props.dataModel;
+
         return(
-            <AlbumsListView />
+            <AlbumsListView
+                isProcessing={isProcessing}
+            />
         )
     }
 
 
-    /**
+    /**x
      * Fetch Items for Search
      * */
     fetchItems(searchString) {
