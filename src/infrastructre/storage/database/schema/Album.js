@@ -33,6 +33,9 @@ const Album = {
         currency: 'string',
         primaryGenreName: 'string',
         isStreamable: 'bool',
+        wrapperType: 'string',
+        kind: 'string',
+        trackTimeMillis: 'int'
     }
 }
 

@@ -57,6 +57,9 @@ class AlbumRepository extends IRepository {
                            currency: data.currency,
                            primaryGenreName: data.primaryGenreName,
                            isStreamable: data.isStreamable,
+                           wrapperType: data.wrapperType,
+                           kind: data.kind,
+                           trackTimeMillis: data.trackTimeMillis
                        }, true);
                }
             });
