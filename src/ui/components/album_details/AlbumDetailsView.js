@@ -64,7 +64,7 @@ class AlbumDetailsView extends Component {
         return(
             <TouchableOpacity
                 onPress={() => {
-
+                    this.props.onItemSelect(item);
                 }}>
                 <TextDescription
                     title={item.toUpperCase()}
@@ -73,6 +73,7 @@ class AlbumDetailsView extends Component {
             </TouchableOpacity>
         )
     }
+
 }
 
 
