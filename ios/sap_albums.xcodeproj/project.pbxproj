@@ -194,7 +194,6 @@
 				3322E6AF66621E82C4CA2CA9 /* Pods-sap_albums-tvOSTests.debug.xcconfig */,
 				4A37F7CFB1ADFDF67FA8BCC1 /* Pods-sap_albums-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
