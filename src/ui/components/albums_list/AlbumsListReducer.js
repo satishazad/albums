@@ -6,7 +6,10 @@ import {
 
 const initialState = {
     isProcessing: false,
-    albums: null,  //Type of AlbumListModel
+    albumData: {
+        albums: [],
+        albumsCount: 0
+    },  //Type of AlbumListModel
     error: null     //{ message: 'error-message' }
 }
 
@@ -26,7 +29,7 @@ const albumsListReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isProcessing: false,
-                albums: action.payload,
+                albumData: action.payload,
                 error: null
             }
 

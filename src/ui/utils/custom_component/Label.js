@@ -40,7 +40,7 @@ class Label extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        padding: responsive(6)
+        padding: responsive(2)
     },
     text: {
         fontSize: AppTheme.FONT_SIZE.MEDIUM

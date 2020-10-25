@@ -5,7 +5,7 @@ const AppTheme = {
     COLOR: {
         BACKGROUND: '#ffffff',
 
-        BORDER: '#000000'
+        BORDER: 'grey'
     },
 
 
@@ -36,6 +36,14 @@ const AppTheme = {
     FONT_WEIGHT: {
         NORMAL: 'normal',
         BOLD: 'bold'
+    },
+
+    BORDER_RADIUS: {
+        DEFAULT: 10
+    },
+
+    BORDER_WIDTH: {
+        DEFAULT: 1
     }
 }
 

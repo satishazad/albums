@@ -6,6 +6,8 @@ import {
     fetchAlbumsList
 } from './AlbumsListActions';
 
+const SEARCH_STRING = 'jack+johnson';
+
 
 class AlbumsListContainer extends Component {
 
@@ -16,7 +18,7 @@ class AlbumsListContainer extends Component {
 
 
     componentDidMount() {
-        this.props.fetchAlbumsList();
+        this.props.fetchAlbumsList(SEARCH_STRING);
     }
 
     componentWillUnmount() {
@@ -29,12 +31,14 @@ class AlbumsListContainer extends Component {
     render() {
 
         let {
-            isProcessing
+            isProcessing,
+            albumData
         } = this.props.dataModel;
 
         return(
             <AlbumsListView
                 isProcessing={isProcessing}
+                albumData={albumData}
             />
         )
     }

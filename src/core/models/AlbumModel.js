@@ -13,7 +13,7 @@ class AlbumModel extends JSModel {
             this.artistId = json.artistId;
             this.collectionId = json.collectionId;
             this.trackId = json.trackId;
-            this.artistName = json.artistName;
+            this.artistName = (json.artistName) ? json.artistName : '';
             this.collectionName = json.collectionName;
             this.trackName = json.trackName;
             this.collectionCensoredName = json.collectionCensoredName;
