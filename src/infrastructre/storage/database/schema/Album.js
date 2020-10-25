@@ -32,7 +32,7 @@ const Album = {
         country: 'string',
         currency: 'string',
         primaryGenreName: 'string',
-        isStreamable: 'boolean',
+        isStreamable: 'bool',
     }
 }
 

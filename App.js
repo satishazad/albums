@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import AppContainer from "./src/navigator/AppNavigator";
 import {Provider} from "react-redux";
 import store from "./src/store/Store";
+import DBHelper from "./src/infrastructre/storage/database/db_helpers/DBHelper";
 
 
 
@@ -18,6 +19,7 @@ class App extends Component {
     constructor(props) {
         super(props);
 
+        this.configureOnAppLaunch();
     }
 
 
@@ -27,6 +29,14 @@ class App extends Component {
                 <AppContainer/>
             </Provider>
         )
+    }
+
+
+    configureOnAppLaunch() {
+
+        //Database
+        DBHelper.initialize();
+
     }
 }
 
