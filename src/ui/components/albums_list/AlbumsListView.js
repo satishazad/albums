@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import {
-    View, StyleSheet, Dimensions
+    View, StyleSheet, Dimensions, TouchableOpacity
 } from 'react-native';
 import { FlatGrid} from "react-native-super-grid";
 import {ViewStyle} from "../../common_styles/ViewStyle";
@@ -46,7 +46,7 @@ class AlbumsListView extends Component {
                 <FlatGrid
                     itemDimension={SIZE}
                     data={albums}
-                    renderItem={({ item }) => this.renderItem(item)}
+                    renderItem={(data) => this.renderItem(data)}
                 />
                 <Loader visible={isProcessing}/>
             </View>
@@ -54,10 +54,20 @@ class AlbumsListView extends Component {
     }
 
 
-    renderItem(item) {
+    renderItem(data) {
+
+        let {
+            item, index
+        } = data;
 
         return(
-            <AlbumCell item={item} size={SIZE}/>
+            <TouchableOpacity
+                onPress={() => {
+                    let { onAlbumPress } = this.props;
+                    if (onAlbumPress) { onAlbumPress(index) }
+                }}>
+                <AlbumCell item={item} size={SIZE}/>
+            </TouchableOpacity>
         )
     }
 }

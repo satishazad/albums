@@ -7,6 +7,7 @@ import {
     setSelectedAlbumIndex
 } from './AlbumsListActions';
 import FlashAlert from "../../utils/alerts/FlashAlert";
+import {ROUTE} from "../../../navigator/Route";
 
 const SEARCH_STRING = 'jack+johnson';
 
@@ -41,8 +42,20 @@ class AlbumsListContainer extends Component {
             <AlbumsListView
                 isProcessing={isProcessing}
                 albumData={albumData}
+                onAlbumPress={(index) => {
+                    this.onAlbumPress(index);
+                }}
             />
         )
+    }
+
+
+    /**
+     * On Album Selected Action
+     * */
+    onAlbumPress(index) {
+        this.props.setSelectedAlbumIndex(index);
+        this.props.navigation.navigate(ROUTE.ALBUM_DETAILS);
     }
 
 

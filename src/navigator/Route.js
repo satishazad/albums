@@ -1,7 +1,8 @@
 
 const ROUTE = {
     //WELCOME: 'Welcome',
-    ALBUMS_LIST: 'AlbumsList'
+    ALBUMS_LIST: 'AlbumsList',
+    ALBUM_DETAILS: 'AlbumDetails'
 }
 
 
