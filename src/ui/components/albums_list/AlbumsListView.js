@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import {
     View, StyleSheet
 } from 'react-native';
+import {ViewStyle} from "../../common_styles/ViewStyle";
 
 class AlbumsListView extends Component {
 
@@ -25,7 +26,7 @@ class AlbumsListView extends Component {
      * */
     render() {
         return(
-            <View style={styles.container}>
+            <View style={[ViewStyle.container, styles.container]}>
 
             </View>
         )
