@@ -8,6 +8,10 @@
 
 import React, {Component} from 'react';
 import AppContainer from "./src/navigator/AppNavigator";
+import {Provider} from "react-redux";
+import store from "./src/store/Store";
+
+
 
 class App extends Component {
 
@@ -19,7 +23,9 @@ class App extends Component {
 
     render() {
         return (
-            <AppContainer/>
+            <Provider store={store}>
+                <AppContainer/>
+            </Provider>
         )
     }
 }

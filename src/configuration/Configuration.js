@@ -12,6 +12,10 @@ class Configuration {
         return this.environment.BaseURL;
     }
 
+    getDBSchemaVersion() {
+        return this.environment.DBVersion;
+    }
+
 
     isDebug() {
         return __DEV__;

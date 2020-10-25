@@ -1,6 +1,11 @@
 
 import React, { Component } from 'react';
 import AlbumsListView from "./AlbumsListView";
+import { connect } from 'react-redux';
+import {
+    fetchAlbumsList
+} from './AlbumsListActions';
+
 
 class AlbumsListContainer extends Component {
 
@@ -11,7 +16,7 @@ class AlbumsListContainer extends Component {
 
 
     componentDidMount() {
-
+        this.props.fetchAlbumsList();
     }
 
     componentWillUnmount() {
@@ -51,4 +56,15 @@ class AlbumsListContainer extends Component {
 }
 
 
-export default AlbumsListContainer;
+const mapStateToProps = (state) => {
+    return {
+        dataModel: state.albumsList
+    }
+}
+
+const mapDispatchToProps = {
+    fetchAlbumsList
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(AlbumsListContainer);
