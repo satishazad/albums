@@ -1,0 +1,6 @@
+module Pods_sap_albums_sap_albumsTests {
+  umbrella header "Pods-sap_albums-sap_albumsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
