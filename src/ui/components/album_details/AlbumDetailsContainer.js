@@ -35,10 +35,23 @@ class AlbumDetailsContainer extends Component {
                 onItemSelect={(key) => {
                     this.actionForItem(key);
                 }}
+                onPlay={() => {
+                    this.onPlayAlbum();
+                }}
             />
         )
     }
 
+
+    onPlayAlbum() {
+        let {
+            album
+        } = this.props;
+
+        let { previewUrl } = album;
+
+        this.openDisplayPage('previewUrl', previewUrl);
+    }
 
     actionForItem(key) {
         let {
