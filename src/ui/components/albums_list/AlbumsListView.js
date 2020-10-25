@@ -7,6 +7,7 @@ import { FlatGrid} from "react-native-super-grid";
 import {ViewStyle} from "../../common_styles/ViewStyle";
 import Loader from "../../utils/loader/Loader";
 import AlbumCell from "../../utils/custom_component/AlbumCell";
+import NoDataView from "../../utils/custom_component/NoDataView";
 
 const { width, height } = Dimensions.get('window');
 
@@ -43,15 +44,20 @@ class AlbumsListView extends Component {
 
         return(
             <View style={[ViewStyle.container, styles.container]}>
-                <FlatGrid
-                    itemDimension={SIZE}
-                    data={albums}
-                    renderItem={(data) => this.renderItem(data)}
-                />
+                {(albumsCount > 0) ? (
+                    <FlatGrid
+                        itemDimension={SIZE}
+                        data={albums}
+                        renderItem={(data) => this.renderItem(data)}
+                    />
+                ) : (
+                    <NoDataView />
+                )}
                 <Loader visible={isProcessing}/>
             </View>
         )
     }
+
 
 
     renderItem(data) {

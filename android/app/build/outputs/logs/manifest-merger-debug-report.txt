@@ -14,6 +14,7 @@ MERGED from [:react-native-gesture-handler] /Users/satish/Documents/Sap_Demo/alb
 MERGED from [:react-native-reanimated] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-reanimated/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-23:12
 MERGED from [:realm] /Users/satish/Documents/Sap_Demo/albums/node_modules/realm/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.63.3] /Users/satish/.gradle/caches/transforms-2/files-2.1/5e693235a340379a6ee00a22df70edac/jetified-react-native-0.63.3/AndroidManifest.xml:2:1-13:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/satish/.gradle/caches/transforms-2/files-2.1/37b6f551bc5ae153b0b627de8f563815/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -98,6 +99,8 @@ application
 ADDED from /Users/satish/Documents/Sap_Demo/albums/android/app/src/main/AndroidManifest.xml:7:5-26:19
 MERGED from /Users/satish/Documents/Sap_Demo/albums/android/app/src/main/AndroidManifest.xml:7:5-26:19
 MERGED from /Users/satish/Documents/Sap_Demo/albums/android/app/src/main/AndroidManifest.xml:7:5-26:19
+MERGED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
+MERGED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-21:19
 MERGED from [:realm] /Users/satish/Documents/Sap_Demo/albums/node_modules/realm/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-20
 MERGED from [:realm] /Users/satish/Documents/Sap_Demo/albums/node_modules/realm/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:9:5-20
 MERGED from [com.facebook.react:react-native:0.63.3] /Users/satish/.gradle/caches/transforms-2/files-2.1/5e693235a340379a6ee00a22df70edac/jetified-react-native-0.63.3/AndroidManifest.xml:11:5-20
@@ -184,6 +187,8 @@ MERGED from [:react-native-safe-area-context] /Users/satish/Documents/Sap_Demo/a
 MERGED from [:react-native-safe-area-context] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:realm] /Users/satish/Documents/Sap_Demo/albums/node_modules/realm/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:realm] /Users/satish/Documents/Sap_Demo/albums/node_modules/realm/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.63.3] /Users/satish/.gradle/caches/transforms-2/files-2.1/5e693235a340379a6ee00a22df70edac/jetified-react-native-0.63.3/AndroidManifest.xml:7:5-9:41
@@ -298,3 +303,19 @@ MERGED from [:react-native-community_netinfo] /Users/satish/Documents/Sap_Demo/a
 MERGED from [:react-native-community_netinfo] /Users/satish/Documents/Sap_Demo/albums/node_modules/@react-native-community/netinfo/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-76
 	android:name
 		ADDED from [com.facebook.flipper:flipper:0.54.0] /Users/satish/.gradle/caches/transforms-2/files-2.1/1c7787ec82631e0394972c76bdabe608/flipper-0.54.0/AndroidManifest.xml:16:22-73
+provider#com.reactnativecommunity.webview.RNCWebViewFileProvider
+ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-20:20
+	android:grantUriPermissions
+		ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:14:13-64
+	android:exported
+		ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-83
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:13-19:63
+	android:resource
+		ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:19:17-60
+	android:name
+		ADDED from [:react-native-webview] /Users/satish/Documents/Sap_Demo/albums/node_modules/react-native-webview/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-67
