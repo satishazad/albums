@@ -1,5 +1,6 @@
 
 import IRepository from "../../../../core/base_repository/IRepository";
+import AlbumsListModel from "../../../../core/models/AlbumsListModel";
 
 
 const ALBUM_SCHEMA_KEYS = {
@@ -68,7 +69,14 @@ class AlbumRepository extends IRepository {
 
     getAll() {
         //super.getAll();
-
+        let realm = this.database.realmObj;
+        let realmObjects = realm.objects(ALBUM_SCHEMA_KEYS.NAME);
+        let records = Array.from(realmObjects);
+        let model = new AlbumsListModel({
+            resultCount: records.length,
+            results: records
+        });
+        return model;
     }
 }
 

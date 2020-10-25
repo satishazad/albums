@@ -1,6 +1,7 @@
 import {FETCH_ALBUMS_LIST_FAILURE, FETCH_ALBUMS_LIST_REQUEST, FETCH_ALBUMS_LIST_SUCCESS} from "./AlbumsListActionTypes";
 import AlbumService from "../../../infrastructre/web_api/api_services/AlbumService";
 import SyncAlbums from "../../../infrastructre/sync/SyncAlbums";
+import AlbumRepository from "../../../infrastructre/storage/database/repository/AlbumRepository";
 
 
 const fetchAlbumsListRequest = () => {
@@ -31,11 +32,11 @@ export const fetchAlbumsList = (searchString) => {
         dispatch(fetchAlbumsListRequest());
         try {
 
-            let service = new AlbumService();
-            let res = await service.fetchItems(searchString);
-
             let sync = new SyncAlbums();
             await sync.startSync(searchString);
+
+            let repo = new AlbumRepository();
+            let res = repo.getAll();
 
             dispatch(fetchAlbumsListSuccess(res));
 
