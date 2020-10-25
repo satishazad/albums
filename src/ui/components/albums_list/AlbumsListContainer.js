@@ -3,8 +3,10 @@ import React, { Component } from 'react';
 import AlbumsListView from "./AlbumsListView";
 import { connect } from 'react-redux';
 import {
-    fetchAlbumsList
+    fetchAlbumsList,
+    setSelectedAlbumIndex
 } from './AlbumsListActions';
+import FlashAlert from "../../utils/alerts/FlashAlert";
 
 const SEARCH_STRING = 'jack+johnson';
 
@@ -18,7 +20,7 @@ class AlbumsListContainer extends Component {
 
 
     componentDidMount() {
-        this.props.fetchAlbumsList(SEARCH_STRING);
+        this.fetchItems(SEARCH_STRING);
     }
 
     componentWillUnmount() {
@@ -48,21 +50,21 @@ class AlbumsListContainer extends Component {
      * Fetch Items for Search
      * */
     fetchItems(searchString) {
-        // this.props.fetchStoreItemsList(searchString)
-        //     .then(() => {
-        //         this.onResultSuccess();
-        //     }).catch((error) => {
-        //        //FlashAlert.showError(error.message);
-        // });
+        this.props.fetchAlbumsList(searchString)
+            .then(() => {
+                this.onResultSuccess();
+            }).catch((error) => {
+               FlashAlert.showError(error.message);
+        });
     }
 
     onResultSuccess() {
-        // let { error } = this.props.dataModel;
-        // if (error) {
-        //     //FlashAlert.showError(error.message);
-        // } else {
-        //     //FlashAlert.showSuccess('Store items fetched successfully.');
-        // }
+        let { error } = this.props.dataModel;
+        if (error) {
+            FlashAlert.showError(error.message);
+        } else {
+            FlashAlert.showSuccess('Album items fetched successfully.');
+        }
     }
 }
 
@@ -74,7 +76,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    fetchAlbumsList
+    fetchAlbumsList,
+    setSelectedAlbumIndex
 }
 
 

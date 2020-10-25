@@ -12,6 +12,7 @@ import {Provider} from "react-redux";
 import store from "./src/store/Store";
 import DBHelper from "./src/infrastructre/storage/database/db_helpers/DBHelper";
 import NetworkConnectivity from "./src/infrastructre/connectivity/NetworkConnectivity";
+import FlashMessage from "react-native-flash-message";
 
 
 
@@ -30,6 +31,7 @@ class App extends Component {
         return (
             <Provider store={store}>
                 <AppContainer/>
+                <FlashMessage position={"top"} />
             </Provider>
         )
     }

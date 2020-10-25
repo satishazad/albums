@@ -1,4 +1,9 @@
-import {FETCH_ALBUMS_LIST_FAILURE, FETCH_ALBUMS_LIST_REQUEST, FETCH_ALBUMS_LIST_SUCCESS} from "./AlbumsListActionTypes";
+import {
+    ALBUM_ITEM_SELECTED,
+    FETCH_ALBUMS_LIST_FAILURE,
+    FETCH_ALBUMS_LIST_REQUEST,
+    FETCH_ALBUMS_LIST_SUCCESS
+} from "./AlbumsListActionTypes";
 import AlbumService from "../../../infrastructre/web_api/api_services/AlbumService";
 import SyncAlbums from "../../../infrastructre/sync/SyncAlbums";
 import AlbumRepository from "../../../infrastructre/storage/database/repository/AlbumRepository";
@@ -54,3 +59,11 @@ export const fetchAlbumsList = (searchString) => {
 
 
 
+
+
+export const setSelectedAlbumIndex = (index) => {
+    return {
+        type: ALBUM_ITEM_SELECTED,
+        payload: index
+    }
+}
