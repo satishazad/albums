@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
+    "@react-native-community/netinfo": "^5.9.7",
     "@react-navigation/native": "^5.8.0",
     "@react-navigation/stack": "^5.10.0",
     "react": "16.13.1",
     "react-native": "0.63.3",
+    "react-native-event-listeners": "^1.0.7",
     "react-native-flash-message": "^0.1.16",
     "react-native-gesture-handler": "^1.8.0",
     "react-native-jsmodel": "^0.0.6",
@@ -23,10 +25,10 @@
     "react-native-safe-area-context": "^3.1.8",
     "react-native-screens": "^2.11.0",
     "react-redux": "^7.2.1",
+    "realm": "^3.4.2",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "realm": "^3.4.2"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

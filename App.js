@@ -11,6 +11,7 @@ import AppContainer from "./src/navigator/AppNavigator";
 import {Provider} from "react-redux";
 import store from "./src/store/Store";
 import DBHelper from "./src/infrastructre/storage/database/db_helpers/DBHelper";
+import NetworkConnectivity from "./src/infrastructre/connectivity/NetworkConnectivity";
 
 
 
@@ -18,6 +19,8 @@ class App extends Component {
 
     constructor(props) {
         super(props);
+
+        this.connection = new NetworkConnectivity();
 
         this.configureOnAppLaunch();
     }
@@ -37,6 +40,8 @@ class App extends Component {
         //Database
         DBHelper.initialize();
 
+        //Connection Status
+        this.connection.initializeConnectivityListeners();
     }
 }
 

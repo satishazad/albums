@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/satish/Documents/Sap_Demo/sap_albums/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml",
+            "outputFile": "/Users/satish/Documents/Sap_Demo/albums/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gu/values-gu.xml",
             "map": [
                 {
-                    "source": "/Users/satish/.gradle/caches/transforms-2/files-2.1/639e914bfc1efa21e36199d3ff2c5eef/core-1.1.0/res/values-gu/values-gu.xml",
+                    "source": "/Users/satish/.gradle/caches/transforms-2/files-2.1/9f727dd0b94fa130577cac3f58c1c32a/core-1.5.0-alpha04/res/values-gu/values-gu.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

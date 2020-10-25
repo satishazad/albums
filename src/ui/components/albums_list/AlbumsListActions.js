@@ -2,6 +2,7 @@ import {FETCH_ALBUMS_LIST_FAILURE, FETCH_ALBUMS_LIST_REQUEST, FETCH_ALBUMS_LIST_
 import AlbumService from "../../../infrastructre/web_api/api_services/AlbumService";
 import SyncAlbums from "../../../infrastructre/sync/SyncAlbums";
 import AlbumRepository from "../../../infrastructre/storage/database/repository/AlbumRepository";
+import NetworkConnectivity from "../../../infrastructre/connectivity/NetworkConnectivity";
 
 
 const fetchAlbumsListRequest = () => {
@@ -31,9 +32,14 @@ export const fetchAlbumsList = (searchString) => {
     return async dispatch => {
         dispatch(fetchAlbumsListRequest());
         try {
-
-            let sync = new SyncAlbums();
-            await sync.startSync(searchString);
+            let isConnected = await NetworkConnectivity.isConnected();
+            if (isConnected) {
+                console.log('Connected....');
+                let sync = new SyncAlbums();
+                await sync.startSync(searchString);
+            } else {
+                console.log('NOT Connected....');
+            }
 
             let repo = new AlbumRepository();
             let res = repo.getAll();
