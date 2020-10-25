@@ -1,9 +1,11 @@
 import React, {Component} from 'react';
 import {
-    View, StyleSheet
+    View, StyleSheet, FlatList, TouchableOpacity
 } from 'react-native'
 import {ViewStyle} from "../../common_styles/ViewStyle";
-import Label from "../../utils/custom_component/Label";
+import TextDescription from "../../utils/custom_component/TextDescription";
+import {responsive} from "../../utils/responsive/Responsive";
+import {Icon} from "../../icons/IconConstants";
 
 
 class AlbumDetailsView extends Component {
@@ -32,16 +34,52 @@ class AlbumDetailsView extends Component {
         return (
             <View style={[ViewStyle.container, styles.container]}>
 
-                <Label text={JSON.stringify(album)}/>
+                <View style={{ flex: 1 }}>
+                    {Icon({ uri: album.artworkUrl100 }, {
+                        width: '100%',
+                        height: '100%',
+                        resizeMode: 'contain'
+                    })}
+                </View>
+
+                <View style={{ flex: 4 }}>
+                    <FlatList
+                        data={Object.keys(album)}
+                        renderItem={({ item }) => this.renderItem(item)}
+                        keyExtractor={(item, index) => index.toString()}
+                    />
+                </View>
 
             </View>
+        )
+    }
+
+    renderItem(item) {
+        let {
+            album
+        } = this.props;
+
+        let description = album[item];
+
+        return(
+            <TouchableOpacity
+                onPress={() => {
+
+                }}>
+                <TextDescription
+                    title={item.toUpperCase()}
+                    description={description}
+                />
+            </TouchableOpacity>
         )
     }
 }
 
 
 const styles = StyleSheet.create({
-    container: {}
+    container: {
+        padding: responsive(4)
+    }
 })
 
 export default AlbumDetailsView;
