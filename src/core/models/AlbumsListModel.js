@@ -9,7 +9,7 @@ class AlbumsListModel extends JSModel {
         super();
 
         if (this.validate(json)) {
-            this.albumsCount = json.albumsCount;
+            this.albumsCount = json.resultCount;
             this.albums = json.results.map((el) => new AlbumModel(el));
         }
     }

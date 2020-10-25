@@ -11,8 +11,8 @@ class AlbumService {
     }
 
 
-    fetchItems(searchString) {
-        let result = this.rest.httpRequest({
+    async fetchItems(searchString) {
+        let result = await this.rest.httpRequest({
             path: '',
             method: HTTPMethod.GET,
             queryParams: {
